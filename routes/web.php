@@ -44,8 +44,8 @@ Route::middleware('auth')->group(function () {
     Route::get('email/verify', Verify::class)
         ->middleware('throttle:6,1')
         ->name('verification.notice');
-    Route::view('/home', 'layouts.home')->name('home');
-
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::post("/tweets", "TweetsController@store");
     Route::get('password/confirm', Confirm::class)
         ->name('password.confirm');
 });

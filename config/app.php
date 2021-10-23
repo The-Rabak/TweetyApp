@@ -228,6 +228,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'HomeController' => \App\Http\Controllers\HomeController::class,
+        'TweetsController' => \App\Http\Controllers\TweetsController::class,
 
     ],
 

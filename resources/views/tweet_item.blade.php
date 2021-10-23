@@ -4,10 +4,10 @@
     </div>
     <div class="">
         <h5 class="font-bold mb-4">
-            Jenny Dean
+            {{$tweet->user->name}}
         </h5>
         <p class="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, eligendi perferendis? Ad alias amet asperiores ducimus explicabo fugiat iusto perferendis repellat sequi. Consequatur enim illum impedit magnam neque similique totam.
+            {{$tweet->body}}
 
         </p>
     </div>

@@ -1,5 +1,5 @@
 <div class="border border-gray-500 rounded-lg">
-@foreach(range(1,6) as $index)
+@foreach($tweets as $tweet)
 
 @include("tweet_item")
 
