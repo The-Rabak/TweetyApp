@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome')->name('welcome');
+Route::get('/', 'HomeController@index')->name('welcome');
 
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)
@@ -44,8 +44,8 @@ Route::middleware('auth')->group(function () {
     Route::get('email/verify', Verify::class)
         ->middleware('throttle:6,1')
         ->name('verification.notice');
-    Route::get('/home', 'HomeController@index')->name('home');
     Route::post("/tweets", "TweetsController@store");
+    Route::get("/tweets", "TweetsController@index")->name('home');
     Route::get('password/confirm', Confirm::class)
         ->name('password.confirm');
 });
