@@ -7,7 +7,7 @@
                         <li>
                             <a
                                 class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150"
-                                {{--                            href="{{ current_user()->path() }}"--}}
+                                                            href="{{ route("profile", [auth()->user()]) }}"
                             >
                                 Profile
                             </a>

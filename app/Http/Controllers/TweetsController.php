@@ -20,7 +20,7 @@ class TweetsController extends Controller
         $attributes = $this->validateNewTweet();
         $attributes["user_id"] = auth()->id();
         Tweet::create($attributes);
-        return redirect("home");
+        return redirect("/");
     }
 
     public function validateNewTweet()

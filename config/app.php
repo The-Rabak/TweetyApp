@@ -230,6 +230,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'HomeController' => \App\Http\Controllers\HomeController::class,
         'TweetsController' => \App\Http\Controllers\TweetsController::class,
+        'ProfileController' => \App\Http\Controllers\ProfileController::class,
+        'FollowController' => \App\Http\Controllers\FollowController::class,
 
     ],
 

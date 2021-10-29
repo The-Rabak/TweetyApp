@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('welcome');
-
+Route::get('/profile/{user}', "ProfileController@show")->name('profile');
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)
         ->name('login');
@@ -48,6 +48,8 @@ Route::middleware('auth')->group(function () {
     Route::get("/tweets", "TweetsController@index")->name('home');
     Route::get('password/confirm', Confirm::class)
         ->name('password.confirm');
+    Route::post("/profile/{user:name}/follow", "FollowController@store")->name("follow");
+    Route::post("/profile/{user:name}/edit", "ProfileController@edit")->middleware("can:edit,user");
 });
 
 Route::middleware('auth')->group(function () {
